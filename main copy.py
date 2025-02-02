@@ -25,10 +25,6 @@ print("Step 2: Aggregating vulnerabilities...")
 aggregator = VulnerabilityAggregator(results_folder)
 aggregated_df = aggregator.aggregate(merged_df)
 
-# New Step: Compute Vulnerability Proneness
-print("Step 2.1: Computing Vulnerability Proneness...")
-aggregated_df = aggregator.calculate_vulnerability_proneness(pd.read_csv(source_file), pd.read_csv(dependencies_file))
-
 # Step 3: Perform Analysis
 print("Step 3: Performing statistical analysis...")
 analysis = VulnerabilityAnalysis(results_folder)
@@ -58,13 +54,6 @@ vis.plot_cwe_category_heatmap(aggregated_df)
 vis.plot_cwe_category_treemap(aggregated_df)
 vis.plot_cwe_category_sunburst(aggregated_df)
 vis.plot_cwe_cooccurrence_matrix(aggregated_df)
-
-
-vis.plot_vulnerability_proneness_comparison(
-    os.path.join(results_folder, "1_vp_source_all_severities.csv"),
-    os.path.join(results_folder, "1_aggregated_vulnerabilities_all_severities.csv")
-)
-
 
 
 print("Process completed successfully!")
