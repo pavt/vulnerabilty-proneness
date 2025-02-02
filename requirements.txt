@@ -1,0 +1,11 @@
+pandas
+numpy
+scipy
+matplotlib
+seaborn
+statsmodels 
+squarify
+plotly
+kaleido
+networkx
+python-louvain
