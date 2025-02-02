@@ -59,6 +59,10 @@ vis.plot_cwe_category_treemap(aggregated_df)
 vis.plot_cwe_category_sunburst(aggregated_df)
 vis.plot_cwe_cooccurrence_matrix(aggregated_df)
 
+vis.plot_cwe_distribution_by_category_stacked(os.path.join(results_folder, "1_aggregated_vulnerabilities_all_severities.csv"))
+    
+                 
+
 
 vis.plot_vulnerability_components_relationship_logscale(
     os.path.join(results_folder, "1_vp_source_all_severities.csv"),
