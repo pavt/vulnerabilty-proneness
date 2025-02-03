@@ -9,3 +9,5 @@ plotly
 kaleido
 networkx
 python-louvain
+ 
+reportlab
