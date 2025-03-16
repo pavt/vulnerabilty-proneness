@@ -1,4 +1,4 @@
-# 🔍 Vulnerability Analysis in GitHub Actions
+# 🔍 Shadows on the Spotless Workflow: The Vulnerability Proneness of GitHub Actions
 
 This project performs a comprehensive vulnerability analysis in GitHub Actions, focusing on RQ1 and RQ2. It processes vulnerability data from predefined files and generates structured results for interpretation and visualization.
 
