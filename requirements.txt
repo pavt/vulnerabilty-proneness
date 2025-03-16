@@ -9,5 +9,12 @@ plotly
 kaleido
 networkx
 python-louvain
- 
 reportlab
+
+community
+pyyaml
+requests
+scikit-learn
+pygraphviz
+tqdm
+joblib

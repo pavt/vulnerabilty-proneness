@@ -39,35 +39,32 @@ kruskal_stat, kruskal_p_value = analysis.perform_kruskal_wallis_test(stats_df)
 print(f"Step 3.1: Kruskal-Wallis Test - Statistic: {kruskal_stat}, p-value: {kruskal_p_value}")
 
 # Step 4: Generate Visualizations
-print("Step 4: Generating visualizations...")
+print("Step 4: Generating visualizations...Answer of RQ1 and RQ2")
 results_handler = ResultHandler(results_folder)  # Use ResultHandler instance
 vis = VulnerabilityVisualization(results_handler)
 
 # Generate plots and save them as PDFs
-vis.plot_boxplot(stats_df)
-vis.plot_histogram(stats_df)
-vis.plot_category_histograms(stats_df)
-vis.plot_scatter_vulnerability_vs_components(aggregated_df)
-vis.plot_cwe_distribution(aggregated_df)
-vis.plot_cwe_distribution_by_category(aggregated_df)   
-vis.plot_cwe_distribution_by_frequency(aggregated_df)
-vis.plot_cwe_distribution_violinplot(aggregated_df)
-vis.plot_vulnerability_distribution(aggregated_df)
-vis.plot_vulnerability_bubble_scatter(aggregated_df)
+#vis.plot_boxplot(stats_df)
+#vis.plot_histogram(stats_df)
+#vis.plot_category_histograms(stats_df)
+#vis.plot_scatter_vulnerability_vs_components(aggregated_df)
+#vis.plot_cwe_distribution(aggregated_df)
+#vis.plot_cwe_distribution_by_category(aggregated_df)   
+#vis.plot_cwe_distribution_by_frequency(aggregated_df)
+#vis.plot_cwe_distribution_violinplot(aggregated_df)
+#vis.plot_vulnerability_distribution(aggregated_df)
+#vis.plot_vulnerability_bubble_scatter(aggregated_df)
+#vis.plot_cwe_category_treemap(aggregated_df)
+#vis.plot_cwe_category_sunburst(aggregated_df)
+#vis.plot_cwe_cooccurrence_matrix(aggregated_df)
+
+#vis.plot_vulnerability_proneness_comparison_bw(
+#    os.path.join(results_folder, "1_vp_source_all_severities.csv"),
+#    os.path.join(results_folder, "1_aggregated_vulnerabilities_all_severities.csv")
+#)
+
 vis.plot_cwe_category_heatmap(aggregated_df)
-vis.plot_cwe_category_treemap(aggregated_df)
-vis.plot_cwe_category_sunburst(aggregated_df)
-vis.plot_cwe_cooccurrence_matrix(aggregated_df)
-
 vis.plot_cwe_distribution_by_category_stacked(os.path.join(results_folder, "1_aggregated_vulnerabilities_all_severities.csv"))
-
-
-vis.plot_vulnerability_proneness_comparison_bw(
-    os.path.join(results_folder, "1_vp_source_all_severities.csv"),
-    os.path.join(results_folder, "1_aggregated_vulnerabilities_all_severities.csv")
-)
-
-
 vis.plot_vulnerability_proneness_comparison(
     os.path.join(results_folder, "1_vp_source_all_severities.csv"),
     os.path.join(results_folder, "1_aggregated_vulnerabilities_all_severities.csv")
